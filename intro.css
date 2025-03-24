@@ -1,0 +1,468 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+
+body {
+    font-family: 'Pretendard-Regular';    
+    min-height: 100vh; 
+    padding: 0%;
+    margin: 0%;
+    background-color: black;
+    overflow-x: hidden;
+
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.3); 
+  backdrop-filter: blur(10px);          
+  -webkit-backdrop-filter: blur(10px);  
+
+  z-index: 999;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* 막대 느낌 주는 라인 */
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: hsl(192, 77%, 70%); /* 살짝 포인트 컬러 */
+}
+
+.intro {
+    color: white;
+    background-image: url('images/nasa.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: black;   
+    text-align: center;
+    padding: 280px 0 100px;
+}
+
+
+
+.intro h1 {
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.intro p {
+    font-size: 20px;
+}
+
+.intro h6 {
+    margin-top: 15%;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.summary-title {
+  font-size: 40px !important;
+  margin-top: 20%;
+  margin-bottom: 3%;
+}
+
+.parent {
+    /* margin-top: 20%; */
+    margin-left: 10%;
+    width: 80%;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .first, .second, .third {
+    text-align: left;
+    flex: 1;
+    border-radius: 30px;
+    background-color: white;
+    padding: 25px;
+    box-sizing: border-box;
+  }
+
+  .infj {
+    display: block;
+    width: 70px;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 4px;
+  }
+
+  .first h4 {
+    color: black;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 0%;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .first h6{
+    color: rgb(95, 95, 95);
+    margin-top: 10%;
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: 100;
+    line-height: 1.4;
+  }
+
+  .hover-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+  
+  /* 버튼 기본 스타일 */
+  .toggle-btn {
+    font-size: 20px;
+    padding: 4px 10px;
+    background-color: #eee;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .toggle-btn:hover {
+    background-color: #ddd;
+  }
+
+  .hidden-img {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px); 
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    
+    display: block; 
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+
+  .hover-container:hover .hidden-img {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .third .hover-container {
+    margin-top: 55px;
+  }
+  
+
+  .pc {display: block;
+    width: 60px;
+    height: auto;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  .second h4 {
+    color: black;
+    margin-left: 10px;
+    margin-top: 0;
+    margin-bottom: 0%;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 1.4;
+  }
+
+  .second h6{
+    color: rgb(95, 95, 95);
+    margin-left: 10px;
+    margin-top: 10%;
+    font-size: 15px;
+    font-weight: 100;
+    line-height: 1.4;
+  }
+
+  .puppy {
+    display: block;
+    width: 80px;
+    height: auto;
+    margin-bottom: 4px;
+  }
+
+  .third h4 {
+    color: black;
+    margin-left: 10px;
+    margin-top: 0;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .third h6{
+    color: rgb(95, 95, 95);
+    margin-left: 10px;
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 100;
+    line-height: 1.4;
+  }
+
+  .two h2 {
+    margin-top: 30%;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+  .two {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    background-color: #000000;
+    margin-bottom: 0%;
+  }
+
+  .realhobby {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    margin: 0 0; 
+    justify-content: space-between;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .play, .calli {
+    flex: 1;
+    border-radius: 30px;
+    background-color: white;
+    padding: 25px;
+    box-sizing: border-box;
+  }
+
+  .play h4 {
+    color: black;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 0%;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .play h6{
+    color: rgb(95, 95, 95);
+    margin-top: 15px;
+    font-size: 15px;
+    font-weight: 100;
+    line-height: 1.4;
+  }
+
+  .play h5{
+    color: rgb(95, 95, 95);
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-size: 10px;
+    font-weight: 100;
+    line-height: 1.4;
+  }
+  .playy {
+    width: 400px;
+    height: auto;
+  }
+
+  .play h3 {
+    margin-top: 10%;
+    color:rgb(31, 57, 250);
+    font-size: 15px;
+    font-weight: 100;
+  }
+
+
+  .calli h4 {
+    color: black;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 0%;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .calli h6{
+    color: rgb(95, 95, 95);
+    margin-top: 15px;
+    font-size: 15px;
+    font-weight: 100;
+    line-height: 1.4;
+  }
+  .calli h5{
+    color: rgb(95, 95, 95);
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-size: 10px;
+    font-weight: 100;
+    line-height: 1.4;
+  }
+
+  .callig {
+    width: 400px;
+    height: auto;
+  }
+
+  .calli h3 {
+    margin-top: 10%;
+    color:rgb(31, 57, 250);
+    font-size: 15px;
+    font-weight: 100;
+    }
+
+
+    .outro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    
+      background-image: url('images/earth.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    
+      min-height: 100vh;
+      padding: 0 !important;   
+      margin: 0; 
+      box-sizing: border-box;
+      color: white;
+      text-align: center;
+    }
+    
+
+    .outro h6 {
+      line-height: 1.5;
+    }
+
+    .outro h5 {
+      font-size: 20px;
+      font-weight: lighter; 
+      line-height: 1.5;
+    }
+
+    .outro h1 {
+      font-size: 50px;
+      font-weight: 600;
+  }
+
+    .outro h2 {
+      margin-top: 20%;
+      font-size: 50px;
+      text-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+
+  .tmi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .tmi.left {
+    margin-top: 20%;
+    transform: translateX(-100px);
+    flex-direction: row;
+  }
+  
+  .tmi.right {
+    transform: translateX(100px);
+    flex-direction: row-reverse;
+  }
+  
+  .tmi.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .tmi-img {
+    width: 300px;
+    height: auto;
+  }
+
+  .tmi-imgg {
+    width: 200px;
+    height: auto;
+  }
+  
+  .tmi-text {
+    font-size: 23px;
+  }
+
+    .apple-btn {
+      background-color: #f5f5f7;
+      border: 1px solid #ccc;
+      color: #1d1d1f;
+      font-size: 16px;
+      padding: 12px 24px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-family: 'Pretendard-Regular', sans-serif;
+      transition: all 0.2s ease-in-out;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    }
+    
+    .apple-btn:hover {
+      background-color: #e5e5ea;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12);
+    }
+
+    .footer {
+      color: rgb(248, 248, 248);
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+    
+    .footer p {
+      /* margin-top: 20%; */
+      font-size: 10px;
+    }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
