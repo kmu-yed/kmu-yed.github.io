@@ -42,7 +42,7 @@ const tmiEls = document.querySelectorAll('.tmi');
 const onScroll = () => {
   tmiEls.forEach(el => {
     const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight * 0.85) {
+    if (rect.top < window.innerHeight * 0.6) {
       el.classList.add('show');
     }
   });
